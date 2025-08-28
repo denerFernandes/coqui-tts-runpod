@@ -1,0 +1,21 @@
+# Runpod environment
+runpod~=1.7.6
+
+# Core TTS library
+TTS==0.22.0
+
+# PyTorch - Note: The base image includes a compatible version
+torch>=2.1
+torchaudio
+
+# Audio processing
+soundfile==0.13.1
+librosa==0.10.0
+pydub==0.25.1
+
+# Scientific computing dependencies
+numpy<2.0 # Pin below 2.0 to avoid breaking changes in dependencies
+scipy>=1.7.0
+
+# For downloading reference audio from a URL
+requests==2.31.0
