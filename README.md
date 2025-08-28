@@ -2,7 +2,7 @@
 
 This project provides a serverless worker for Runpod.io to perform text-to-speech using Coqui's XTTS-v2 model. This version includes advanced audio pre-processing and post-processing for higher quality output.
 
-## Files
+## Files 
 
 - `Dockerfile`: Defines the container image for the worker, including `ffmpeg`.
 - `handler.py`: The core worker script. It loads the TTS model and defines the `handler` function that processes incoming jobs, including downloading reference audio, pre/post-processing, and uploading the final result.
