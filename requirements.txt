@@ -19,3 +19,4 @@ scipy>=1.7.0
 
 # For downloading reference audio from a URL
 requests==2.31.0
+blinker==1.4
