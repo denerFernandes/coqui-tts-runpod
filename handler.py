@@ -14,6 +14,11 @@ from TTS.api import TTS
 from pydub import AudioSegment
 from runpod.serverless.utils import rp_upload
 
+# --- Pydub Configuration ---
+# Explicitly tell pydub where to find ffmpeg
+from pydub import AudioSegment
+AudioSegment.converter = "/usr/bin/ffmpeg"
+
 # --- PyTorch Security Fix ---
 # The following is a workaround for a security feature in PyTorch 2.1+
 # which prevents loading pickled files from untrusted sources.
