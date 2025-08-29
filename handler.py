@@ -14,6 +14,14 @@ from TTS.api import TTS
 from pydub import AudioSegment
 from runpod.serverless.utils import rp_upload
 
+# --- PyTorch Security Fix ---
+# The following is a workaround for a security feature in PyTorch 2.1+
+# which prevents loading pickled files from untrusted sources.
+# We explicitly trust the XttsConfig class from the coqui-ai/TTS library.
+from TTS.tts.configs.xtts_config import XttsConfig
+from torch.serialization import add_safe_globals
+add_safe_globals([XttsConfig])
+
 # --- Configuration ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
